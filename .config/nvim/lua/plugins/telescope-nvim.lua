@@ -1,3 +1,5 @@
+
+-- local builtin = require('telescope.builtin')
 -- Fuzzy finder
 return {
   -- https://github.com/nvim-telescope/telescope.nvim
@@ -16,11 +18,17 @@ return {
       end,
     },
   },
+  -- show src code on telescope.grep_string:
+  options  = {
+    previewer = true,
+    grep_previewer = true,
+  },
   opts = {
     defaults = {
+      layout_strategy = "vertical",
       layout_config = {
         vertical = {
-          width = 0.75
+          width = 0.50
         }
       }
     }
